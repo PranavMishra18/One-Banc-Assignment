@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Standardizer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <img src="images/onebanc_logo.jpg" alt="onebanc logo" class="logo" />
+      <h1 class="title">Card <span class="highlight">Standardizer</span></h1>
+      <h3 class="subtitle">
+        Give credit statements of any bank and receive them back in a fixed
+        standard format!
+      </h3>
+
+      <div class="file-upload-container">
+        <label for="fileInput" class="file-upload-button">Choose file</label>
+        <span id="fileNameSpan" class="file-upload-name">No file chosen</span>
+        <input
+          type="file"
+          id="fileInput"
+          accept=".csv,.xls,.xlsx"
+          class="file-upload-input"
+        />
+      </div>
+
+      <p id="selectedFile" class="file-info"></p>
+
+      <button id="downloadBtn" class="download-btn" style="display: none">
+        Download output.csv
+      </button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
